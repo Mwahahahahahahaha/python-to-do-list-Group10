@@ -13,8 +13,8 @@ def show_tasks():
         for i in range (len(tasks)):
             print(i+1,".",tasks[i])
 
-def remove_task(tasknumber):
-    tasks.pop(tasknumber)
+def remove_task(task_number):
+    tasks.pop(task_number)
     print("task removed!!")
 
 def main():
