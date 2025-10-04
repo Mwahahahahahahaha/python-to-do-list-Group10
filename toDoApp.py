@@ -10,10 +10,10 @@ def addtask(task) :
 
 def showTasks():
     if len(tasks) == 0:
-        print("no tasks yet")
+        print("No Tasks Yet")
     else:
         for i in range(len(tasks)):
-            print(i+1, ".", tasks[i])
+            print(f"{i+1}. {tasks[i]}")
 
 def removetask(tasknumber):
     tasks.pop(tasknumber) 
@@ -32,11 +32,12 @@ def main():
         elif ch == "2":
             showTasks()
         elif ch == "3":
-            n=int(input("enter task no to remove: "))
+            n = int(input("enter task no to remove: "))
             removetask(n)   
         elif ch == "4":
             break
         else:
             print("wrong choice!!")
-    os.system("pause")
+        os.system("pause")
+        os.system("cls")
 main()
