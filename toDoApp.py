@@ -4,7 +4,7 @@ import os
 
 tasks=[]
 
-def addtask(task) :
+def add_task(task) :
   tasks.append(task)
   print("task added!")
 
@@ -15,7 +15,7 @@ def showTasks():
         for i in range(len(tasks)):
             print(f"{i+1}. {tasks[i]}")
 
-def removetask(tasknumber):
+def remove_task(tasknumber):
     tasks.pop(tasknumber) 
     print("Task Removed!!")
 
