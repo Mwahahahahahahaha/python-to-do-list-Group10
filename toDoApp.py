@@ -2,11 +2,13 @@
 
 tasks=[]
 
-def add_task(task) :
+def add_task(task):
+    """Task adding function"""
     tasks.append(task)
     print("task added!")
 
 def show_tasks( ):
+    """Show all tasks function"""
     if len(tasks)==0:
         print("no tasks yet")
     else:
@@ -14,10 +16,12 @@ def show_tasks( ):
             print(i+1,".",tasks[i])
 
 def remove_task(tasknumber):
-    tasks.pop(tasknumber) 
+    """Task removing Function"""
+    tasks.pop(tasknumber)
     print("task removed!!")
 
 def main():
+    """The running code"""
     while True:
         print("1 Add Task")
         print("2.Show Tasks")
