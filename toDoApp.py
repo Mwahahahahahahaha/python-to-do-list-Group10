@@ -19,11 +19,11 @@ def show_tasks():
 
 def remove_task(tasknumber):
     """Task removing Function"""
-    if tasknumber < 1 or tasknumber > len(tasks):
-        print("Task does not exist!!")
-        return
-    tasks.pop(tasknumber-1)
-    print("Task removed!!")
+    try:
+        tasks.pop(tasknumber-1)
+        print("Task removed!!")
+    except IndexError:
+        print("Failed to delete task. There is no task associated the specified index")
 
 def main():
     """The running code"""
@@ -39,8 +39,11 @@ def main():
         elif ch == "2":
             show_tasks()
         elif ch == "3":
-            n=int(input("Enter a task to remove: "))
-            remove_task(n)   
+            try:
+                n=int(input("Enter the index of the task to be removed: "))
+                remove_task(n)
+            except ValueError:
+                print("The input must be an integer!")
         elif ch == "4":
             break
         else:
