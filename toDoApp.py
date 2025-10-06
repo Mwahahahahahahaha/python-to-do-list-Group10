@@ -1,5 +1,7 @@
 # toDoApp.py
 
+import os
+
 tasks=[]
 
 def add_task(task):
@@ -40,4 +42,7 @@ def main():
             break
         else:
             print("Wrong Choice!!")
+        
+        os.system("pause")
+        os.system("cls")
 main()
