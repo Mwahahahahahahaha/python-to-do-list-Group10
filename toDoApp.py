@@ -14,13 +14,16 @@ def show_tasks():
     if len(tasks) == 0:
         print("No tasks yet")
     else:
-        for i in range(len(tasks)):
-            print(f"{i+1}. {tasks[i]}")
+        for i, task in enumerate(tasks):
+            print(f"{i+1}. {task}")
 
 def remove_task(tasknumber):
     """Task removing Function"""
-    tasks.pop(tasknumber)
-    print("task removed!!")
+    if tasknumber < 1 or tasknumber > len(tasks):
+        print("Task does not exist!!")
+        return
+    tasks.pop(tasknumber-1)
+    print("Task removed!!")
 
 def main():
     """The running code"""
