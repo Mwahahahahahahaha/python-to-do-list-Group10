@@ -1,5 +1,7 @@
 # toDoApp.py
 
+import os
+
 tasks=[]
 
 def add_task(task):
@@ -23,21 +25,24 @@ def remove_task(tasknumber):
 def main():
     """The running code"""
     while True:
-        print("1 Add Task")
-        print("2.Show Tasks")
-        print("3.Remove Task")
-        print("4- Exit")
-        ch = input("enter choice : ")
-        if ch=="1":
-            t = input("enter task : ")
+        print("1. Add Task")
+        print("2. Show Tasks")
+        print("3. Remove Task")
+        print("4. Exit")
+        ch = input("Enter Choice: ")
+        if ch == "1":
+            t = input("Enter Task: ")
             add_task(t)
-        elif ch=="2":
+        elif ch == "2":
             show_tasks()
-        elif ch=="3":
-            n=int(input("enter task no to remove: "))
+        elif ch == "3":
+            n=int(input("Enter a task to remove: "))
             remove_task(n)   
-        elif ch=="4":
-            break;
+        elif ch == "4":
+            break
         else:
-            print("wrong choice!!")
+            print("Wrong Choice!!")
+        
+        os.system("pause")
+        os.system("cls")
 main()
